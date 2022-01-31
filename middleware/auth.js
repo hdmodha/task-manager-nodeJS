@@ -22,13 +22,13 @@ const authenticateMiddleWare = async (req, res, next) => {
   }
 };
 
-const authenticateUser = async (req, res, next) => {
-  const { username, email, password } = req.body.createdBy;
-  if (!username || !email || !password) {
-    res.status(400).json({ error: "Enter username, email and password" });
-  } else {
-    next();
-  }
-};
+// const authenticateUser = async (req, res, next) => {
+//   const { username, email, password } = req.body.createdBy;
+//   if (!username || !email || !password) {
+//     res.status(400).json({ error: "Enter username, email and password" });
+//   } else {
+//     next();
+//   }
+// };
 
 module.exports = authenticateMiddleWare;
